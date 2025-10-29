@@ -1,0 +1,3 @@
+[submodule "lib/MAX6675-library"]
+	path = lib/MAX6675-library
+	url = https://github.com/banoz/MAX6675-library.git
