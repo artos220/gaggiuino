@@ -2,7 +2,7 @@
 // https://learn.adafruit.com/thermocouple/
 
 //   testing max6675 freq:
-//       50000, 25000, 1000 - eliminates temp error, but the deviation is greater
+//       50000, 25000, 1000 - eliminates "TEMP READ ERROR", but the deviation is greater
 //       100 - better deviation < 0.7
 
 #include "max6675.h"
