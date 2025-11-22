@@ -1,9 +1,8 @@
 // this library is public domain. enjoy!
 // https://learn.adafruit.com/thermocouple/
 
-//   testing max6675 freq:
-//       50000, 25000, 1000 - eliminates "TEMP READ ERROR", but the deviation is greater
-//       100 - better deviation < 0.7
+//   fix max6675 freq:
+//       80000 - eliminates "TEMP READ ERROR"
 
 #include "max6675.h"
 
@@ -16,7 +15,7 @@
 */
 /**************************************************************************/
 MAX6675::MAX6675(int8_t _sclk, int8_t _cs, int8_t _miso)
-    : spi_dev(_cs, _sclk, _miso, -1, 100) {}
+    : spi_dev(_cs, _sclk, _miso, -1, 80000) {}
 
 /**************************************************************************/
 /*!
@@ -27,7 +26,7 @@ MAX6675::MAX6675(int8_t _sclk, int8_t _cs, int8_t _miso)
 */
 /**************************************************************************/
 MAX6675::MAX6675(int8_t _cs, SPIClass *_spi)
-    : spi_dev(_cs, 100, SPI_BITORDER_MSBFIRST, SPI_MODE0, _spi) {}
+    : spi_dev(_cs, 80000, SPI_BITORDER_MSBFIRST, SPI_MODE0, _spi) {}
 
 /**************************************************************************/
 /*!
